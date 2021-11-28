@@ -11,8 +11,8 @@ for (const word of words) {
     const isComma = word.includes(',')
     console.log(word, isComma)
 
-    newWords.push(word)
-    newWords.push('<input>')
+    newWords.push(word.replace(',', ''))
+    newWords.push('<input data-comma="' + isComma + '">')
 }
 
 tekstEl.innerHTML = newWords.join(' ')
