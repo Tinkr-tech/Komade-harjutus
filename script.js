@@ -10,3 +10,5 @@ for (const word of words) {
     newWords.push(word)
     newWords.push('<input>')
 }
+
+tekstEl.innerHTML = newWords.join(' ')
