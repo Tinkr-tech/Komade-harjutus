@@ -34,5 +34,8 @@ kontrolliBtn.onclick = function (event) {
             punktid -= 1
         }
     }
+    const maksPunkte = document.querySelectorAll('input[data-comma="true"]').length
     document.querySelector('#punktid').innerText = punktid
+    const hinne = Math.round(punktid / maksPunkte * 100)
+    document.querySelector('#hinne').innerText = hinne + '%'
 }
