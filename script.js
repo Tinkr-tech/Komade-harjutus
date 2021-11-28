@@ -19,6 +19,7 @@ tekstEl.innerHTML = newWords.join(' ')
 const kontrolliBtn = document.querySelector('button#kontrolli')
 kontrolliBtn.onclick = function (event) {
     const allInputs = document.querySelectorAll('input')
+    let punktid = 0
     for (const input of allInputs) {
         const expectedComma = input.getAttribute('data-comma') === 'true'
         const actualComma = input.value === ','
@@ -27,5 +28,11 @@ kontrolliBtn.onclick = function (event) {
         } else {
             input.classList.remove('incorrect')
         }
+        if (expectedComma && actualComma) {
+            punktid += 1
+        } else if (!expectedComma && actualComma) {
+            punktid -= 1
+        }
     }
+    document.querySelector('#punktid').innerText = punktid
 }
