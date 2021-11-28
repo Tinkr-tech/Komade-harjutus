@@ -20,3 +20,7 @@ button {
     font-size: 1.6rem;
     margin: auto;
 }
+
+.incorrect {
+    border-color: red;
+}
