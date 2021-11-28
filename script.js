@@ -25,11 +25,13 @@ kontrolliBtn.onclick = function (event) {
         const actualComma = input.value === ','
         if (expectedComma !== actualComma) {
             input.classList.add('incorrect')
+            input.classList.remove('correct')
         } else {
             input.classList.remove('incorrect')
         }
         if (expectedComma && actualComma) {
             punktid += 1
+            input.classList.add('correct')
         } else if (!expectedComma && actualComma) {
             punktid -= 1
         }

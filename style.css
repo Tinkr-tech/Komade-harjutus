@@ -24,3 +24,6 @@ button {
 .incorrect {
     border-color: red;
 }
+.correct {
+    border-color: green;
+}
