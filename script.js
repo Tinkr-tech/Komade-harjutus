@@ -16,3 +16,9 @@ for (const word of words) {
 }
 
 tekstEl.innerHTML = newWords.join(' ')
+
+const kontrolliBtn = document.querySelector('button#kontrolli')
+kontrolliBtn.onclick = function (event) {
+    const allInputs = document.querySelectorAll('input')
+
+}
